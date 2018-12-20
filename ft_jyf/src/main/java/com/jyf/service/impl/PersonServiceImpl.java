@@ -15,26 +15,41 @@ public class PersonServiceImpl implements PersonService{
 	@Autowired
 	private PersonDaoImpl personDapImpl;
 
+	/**
+	   *  新增
+	 */
 	@Override
 	public void insertPerson(Person person) {
 		personDapImpl.insertPerson(person);
 	}
 
+	/**
+	   *  删除
+	 */
 	@Override
 	public void deletePerson(Person person) {
 		personDapImpl.deletePerson(person);
 	}
 
+	/**
+	   *  更新
+	 */
 	@Override
 	public void updatePerson(Person person) {
 		personDapImpl.updatePerson(person);
 	}
 
+	/**
+	   *  根据id 查询person
+	 */
 	@Override
 	public Person fetchPerson(int id) {
 		return personDapImpl.fetchPerson(id);
 	}
 
+	/**
+	   *  根据name 查询person
+	 */
 	@Override
 	public List<Person> queryPersonByName(String name) {
 		return personDapImpl.queryPerson(Cnd.where(name, "like", "%"+name+"%"));

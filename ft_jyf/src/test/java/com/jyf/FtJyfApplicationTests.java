@@ -45,8 +45,8 @@ public class FtJyfApplicationTests {
 		person.setOrders(orders);
 		
 		nutDao.insertWith(person, "orders");
+		System.out.println(person.getId());
 	}
-
 
 }
 

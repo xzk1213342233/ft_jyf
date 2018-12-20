@@ -10,13 +10,21 @@ import org.springframework.core.env.Environment;
 
 import com.alibaba.druid.pool.DruidDataSource;
 
+/**
+    *  数据库相关配置类
+ * @author xzk
+ *
+ */
 @Configuration
 public class DataSourceConfig {
 	
 	 @Autowired
 	 private Environment env;
 	
-	 //数据源配置
+	 /**
+	      *   数据源配置
+	  * @return
+	  */
 	 @Bean
 	 public DataSource druidDataSource() {		
 		DruidDataSource dataSource = new DruidDataSource();	
@@ -27,7 +35,11 @@ public class DataSourceConfig {
 		return dataSource;
 	 }
 
-	 //使用NUTZ
+	  /**
+	         *    使用NUTZ
+	   * @param druidDataSource
+	   * @return
+	   */
 	  @Bean
 	  public NutDao nutDao(DataSource druidDataSource) {
 	  	NutDao nutDao = new NutDao();

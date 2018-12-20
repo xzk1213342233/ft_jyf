@@ -14,7 +14,10 @@ public class EventImpl  extends ApplicationEvent {
 		super(source);
 	}
 	
-	//根据实体类创建数据库表
+	/**
+	    *   根据实体类创建数据库表
+	 * @param nutDao
+	 */
 	public void createTable(NutDao nutDao) {
 		try {
 			nutDao.create(Person.class, false);

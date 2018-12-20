@@ -11,7 +11,10 @@ public class ListenterImpl {
 	@Autowired
 	private NutDao nutDao;
 	
-	//事件监听器
+	/**
+	   *  事件监听器
+	 * @param eventImpl
+	 */
 	@EventListener
 	public void event(EventImpl eventImpl) {
 		eventImpl.createTable(nutDao);

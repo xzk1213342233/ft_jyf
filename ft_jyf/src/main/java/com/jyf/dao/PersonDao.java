@@ -8,18 +8,33 @@ import com.jyf.pojo.Person;
 
 public interface PersonDao {
 
-	//新增
+	/**
+	   *     新增
+	 * @param person
+	 */
 	public void insertPerson(Person person);
 	
-	//删除
+	/**
+	   *     删除
+	 * @param person
+	 */
 	public void deletePerson(Person person);
 	
-	//更新
+	/**
+	   *     更新
+	 * @param person
+	 */
 	public void updatePerson(Person person);
 	
-	//查询一条
+	/**
+	   *     单条查询
+	 * @param person
+	 */
 	public Person fetchPerson(int id);
 	
-	//查询多条
+	/**
+	   *     多条查询（条件）
+	 * @param person
+	 */
 	public List<Person> queryPerson(Cnd cnd);
 }

@@ -1,26 +1,38 @@
 package com.jyf.service;
 
 import java.util.List;
-
-import org.nutz.dao.Cnd;
-
 import com.jyf.pojo.Person;
 
 public interface PersonService {
 	
-	//新增
+	/**
+	   *    新增
+	 * @param person
+	 */
 	public void insertPerson(Person person);
 	
-	//删除
+	/**
+	   *    删除
+	 * @param person
+	 */
 	public void deletePerson(Person person);
 	
-	//更新
+	/**
+	   *    更新
+	 * @param person
+	 */
 	public void updatePerson(Person person);
 	
-	//查询一条
+	/**
+	   *    单条查询
+	 * @param person
+	 */
 	public Person fetchPerson(int id);
 	
-	//根据name 查询person
+	/**
+	   *    多条查询（name 条件）
+	 * @param person
+	 */
 	public List<Person> queryPersonByName(String name);
 
 }

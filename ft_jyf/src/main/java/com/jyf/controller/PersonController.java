@@ -10,6 +10,11 @@ import com.jyf.pojo.Person;
 import com.jyf.service.impl.PersonServiceImpl;
 import com.jyf.utils.PersonCheckUtil;
 
+/**
+ * person 控制器
+ * @author xzk
+ *
+ */
 @Controller
 @RequestMapping("/person")
 public class PersonController {
@@ -17,7 +22,15 @@ public class PersonController {
 	@Autowired
 	private PersonServiceImpl personServiceImpl;
 	
-	//新增
+	/**
+	   *      新增
+	 * @param name
+	 * @param sex
+	 * @param idNumber
+	 * @param phoneNumber
+	 * @param address
+	 * @return
+	 */
 	@RequestMapping("/insertPerson")
 	@ResponseBody
 	public String insertPerson(@RequestParam(value = "name",required = false) String name,
@@ -35,7 +48,16 @@ public class PersonController {
 		return "新增完成";
 	}
 	
-	//更新
+	/**
+	   *     更新
+	 * @param id
+	 * @param name
+	 * @param sex
+	 * @param idNumber
+	 * @param phoneNumber
+	 * @param address
+	 * @return
+	 */
 	@RequestMapping("/updatePerson")
 	@ResponseBody
 	public String updatePerson(@RequestParam(value = "id") Integer id,
@@ -61,7 +83,11 @@ public class PersonController {
 		return "更新完成";
 	}
 	
-	//删除
+	/**
+	   *    删除
+	 * @param id
+	 * @return
+	 */
 	@RequestMapping("/deletePerson")
 	@ResponseBody
 	public String deletePerson(@RequestParam(value = "id") Integer id) {
@@ -75,7 +101,11 @@ public class PersonController {
 		return "删除完成";
 	}
 	
-	//根据name 查询person
+	/**
+	    *   根据name 查询person
+	 * @param name
+	 * @return
+	 */
 	@RequestMapping("/queryPersonByName")
 	@ResponseBody
 	public String queryPersonByName(@RequestParam(value = "name") String name) {

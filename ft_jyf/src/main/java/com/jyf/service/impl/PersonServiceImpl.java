@@ -9,6 +9,11 @@ import com.jyf.dao.impl.PersonDaoImpl;
 import com.jyf.pojo.Person;
 import com.jyf.service.PersonService;
 
+/**
+ * person 服务实现
+ * @author xzk
+ *
+ */
 @Service
 public class PersonServiceImpl implements PersonService{
 	
